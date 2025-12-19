@@ -7,3 +7,12 @@ Existem algumas opções gratuitas (ou com tier gratuito) que você pode usar pa
 •	TheSportsDB (https://www.thesportsdb.com/) — base crowdsourced; tem endpoints gratuitos com API key.
 
 •	Dados abertos / oficiais: não há um endpoint público e estável universal da CBF amplamente documentado; às vezes há datasets públicos ou feeds de parceiros — confirme legalidade antes de scraping.
+
+
+
+1. API em c# (.net api core) que retorna os jogos do Brasileirão e dados sobre partidas jogadores e etc
+Desafios:
+- integrar com swagger
+- ⁠ usar arquitetura REST
+-  ⁠usar banco de dado MONGODB
+- ⁠ ter uma autenticação mínima JWT
