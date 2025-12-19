@@ -1,0 +1,6 @@
+@Olegacy.FutebolAPI_HostAddress = http://localhost:5237
+
+GET {{Olegacy.FutebolAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

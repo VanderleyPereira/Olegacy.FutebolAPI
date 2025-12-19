@@ -1,0 +1,9 @@
+Existem algumas opções gratuitas (ou com tier gratuito) que você pode usar para obter dados do Brasileirão:
+
+•	api-football (https://www.api-football.com/) — disponível via RapidAPI; plano grátis com limite de requisições.
+
+•	football-data.org (https://www.football-data.org/) — oferece token grátis; verifique cobertura da Série A.
+
+•	TheSportsDB (https://www.thesportsdb.com/) — base crowdsourced; tem endpoints gratuitos com API key.
+
+•	Dados abertos / oficiais: não há um endpoint público e estável universal da CBF amplamente documentado; às vezes há datasets públicos ou feeds de parceiros — confirme legalidade antes de scraping.

@@ -1,0 +1,6 @@
+1. API em c# (.net api core) que retorna os jogos do Brasileirão e dados sobre partidas jogadores e etc
+Desafios:
+- integrar com swagger
+- ⁠ usar arquitetura REST
+-  ⁠usar banco de dado MONGODB
+- ⁠ ter uma autenticação mínima JWT
