@@ -1,25 +1,29 @@
+using Refit;
+using Olegacy.FutebolAPI.Clients;
+using Olegacy.FutebolAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMemoryCache();
+
+builder.Services.AddRefitClient<IApiFutebolClient>()
+    .ConfigureHttpClient(c =>
+    {
+        c.BaseAddress = new Uri("https://api.campeonato-brasileiro.com.br");
+    });
+
+builder.Services.AddScoped<IBrasileiraoService, BrasileiraoService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Swagger sempre ativo (qualquer ambiente)
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
